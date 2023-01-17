@@ -1,8 +1,8 @@
 FROM nginx:latest
 
 # Copy the nginx configuration file to the container
-COPY ./nginx.conf /etc/nginx/nginx.conf
-COPY ./apps /usr/share/nginx/html/apps/
+# COPY ./nginx.conf /etc/nginx/nginx.conf
+# COPY ./apps/apple/ /usr/share/nginx/html/
 
 RUN ["apt-get", "update"]
 RUN ["apt-get", "install", "-y", "vim"]
