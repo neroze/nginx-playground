@@ -30,6 +30,8 @@ services:
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf
       - ./www:/usr/share/nginx/html
+      - ./log/nginx/access.log:/var/log/nginx/access.log;
+      - ./log/nginx/error.log:/var/log/nginx/error.log;
       # - ./lpdocs.template:/etc/nginx/conf.d/lpdocs.template
     restart: always
     #command: /bin/bash -c "envsubst < /etc/nginx/conf.d/lpdocs.template > /etc/nginx/nginx.conf && nginx -g 'daemon off;'" 
